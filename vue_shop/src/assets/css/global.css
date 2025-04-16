@@ -1,0 +1,20 @@
+/* 全局样式 */
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* 更改级联选择器的高度 */
+.el-cascader-menu__list {
+  height: 270px;
+}
+
+.el-step__title {
+  font-size: 13px;
+}
+
+.ql-editor {
+  min-height: 200px;
+}

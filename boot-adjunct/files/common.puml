@@ -1,0 +1,101 @@
+@startuml
+class com.edu.boot.common.ResultObj {
++ {static} ResultObj LOGIN_SUCCESS
++ {static} ResultObj LOGIN_FAIL_PASS
++ {static} ResultObj LOGIN_FAIL_CODE
++ {static} ResultObj THE_USER_ALREADY_EXISTS
++ {static} ResultObj ADD_SUCCESS
++ {static} ResultObj ADD_ERROR
++ {static} ResultObj DELETE_SUCCESS
++ {static} ResultObj DELETE_FAIL
++ {static} ResultObj UPDATE_SUCCESS
++ {static} ResultObj UPDATE_FAIL
++ {static} ResultObj ILLEGAL_MOBILE_NUMBER
++ {static} ResultObj RESET_SUCCESS
++ {static} ResultObj RESET_FAIL
++ {static} ResultObj DISPATCH_SUCCESS
++ {static} ResultObj DISPATCH_FAIL
++ {static} ResultObj BACKINPORT_SUCCESS
++ {static} ResultObj BACKINPORT_FAIL
++ {static} ResultObj SYNCCACHE_SUCCESS
++ {static} ResultObj DELETE_FAIL_NEWS
++ {static} ResultObj DELETE_QUERY
+}
+
+class com.edu.boot.common.WebSocketServer {
++ {static} Map<String,Session> sessionMap
++ void onOpen(Session,String)
++ void onClose(Session,String)
++ void onMessage(String,Session,String)
++ void onError(Session,Throwable)
+}
+
+
+class com.edu.boot.common.UUIDUtils {
++ {static} String getUUID()
++ {static} void main(String[])
+}
+
+class com.edu.boot.common.Base64Utils {
++ {static} String convertToBase64(MultipartFile)
+}
+
+class com.edu.boot.common.ReturnCode {
++ {static} String SUCCESS
++ {static} String FAIL
++ {static} String UNAUTHORIZED
++ {static} String NOT_FOUND
++ {static} String INTERNAL_SERVER_ERROR
++ {static} String DEFAULT_IMG_USER
+}
+
+class com.edu.boot.common.api.CommonResult {
++ long getCode()
++ void setCode(long)
++ String getMessage()
++ void setMessage(String)
++ T getData()
++ void setData(T)
++ {static} CommonResult<T> success(T)
++ {static} CommonResult<T> success(T,String)
++ {static} CommonResult<T> failed(IErrorCode)
++ {static} CommonResult<T> failed(String)
++ {static} CommonResult<T> failed()
++ {static} CommonResult<T> validateFailed()
++ {static} CommonResult<T> validateFailed(String)
++ {static} CommonResult<T> unauthorized(T)
++ {static} CommonResult<T> forbidden(T)
+}
+
+class com.edu.boot.common.OutputObject {
++ String toString()
+}
+
+class com.edu.boot.common.TokenUtil {
++ {static} String sign(Users)
++ {static} boolean verify(String)
+}
+
+interface com.edu.boot.common.api.IErrorCode {
+}
+enum com.edu.boot.common.api.ResultCode {
++  SUCCESS
++  FAILED
++  VALIDATE_FAILED
++  UNAUTHORIZED
++  FORBIDDEN
++ long getCode()
++ String getMessage()
+}
+
+
+class com.edu.boot.common.MD5Utils {
++ {static} String md5(String)
++ {static} String md5Minus(String)
++ {static} void main(String[])
+}
+
+
+
+java.io.Serializable <|.. com.edu.boot.common.OutputObject
+@enduml

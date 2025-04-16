@@ -1,0 +1,82 @@
+import Vue from 'vue'
+import {
+  Step,
+  Steps,
+  TabPane,
+  Tabs,
+  Alert,
+  Cascader,
+  Option,
+  Select,
+  Tree,
+  Tag,
+  MessageBox,
+  Dialog,
+  Pagination,
+  Tooltip,
+  Switch,
+  Table,
+  TableColumn,
+  Col,
+  Row,
+  Button,
+  Form,
+  FormItem,
+  Input,
+  Message,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Menu,
+  Submenu,
+  MenuItem,
+  Breadcrumb,
+  BreadcrumbItem,
+  Card,
+  Checkbox,
+  CheckboxGroup,
+  Upload,
+  TimelineItem,
+  Timeline
+} from 'element-ui'
+
+Vue.use(TimelineItem)
+Vue.use(Timeline)
+Vue.use(Button)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Input)
+Vue.use(Container)
+Vue.use(Header)
+Vue.use(Aside)
+Vue.use(Main)
+Vue.use(Menu)
+Vue.use(Submenu)
+Vue.use(MenuItem)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
+Vue.use(Card)
+Vue.use(Col)
+Vue.use(Row)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Switch)
+Vue.use(Tooltip)
+Vue.use(Pagination)
+Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Option)
+Vue.use(Select)
+Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(CheckboxGroup)
+Vue.use(Checkbox)
+Vue.use(Upload)
+Vue.prototype.$message = Message
+Vue.prototype.$confirm = MessageBox.confirm

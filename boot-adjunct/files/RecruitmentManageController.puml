@@ -1,0 +1,11 @@
+@startuml
+class com.edu.boot.controller.BusinessManageController {
++ CommonResult shopShow(Integer)
++ CommonResult shopAdd(BusinessShop)
++ CommonResult shopEdit(BusinessShop)
++ CommonResult shopDelete(Integer)
++ CommonResult changeState(Integer)
++ CommonResult changeNotesInfoAndState(NotesManage)
+}
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+class com.edu.boot.controller.BusinessManageController {
+~ String defaultImgUser
+~ BusinessShopService shopService
+- UserService userService
+~ NotesManageService notesManageService
++ CommonResult shopShow(Integer)
++ CommonResult shopAdd(BusinessShop)
+- String getDefaultImage()
++ CommonResult shopEdit(BusinessShop)
++ CommonResult shopDelete(Integer)
++ CommonResult changeState(Integer)
++ CommonResult changeNotesInfoAndState(NotesManage)
+}
+
+
+@enduml

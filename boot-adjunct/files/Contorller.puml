@@ -1,0 +1,73 @@
+@startuml
+class com.edu.boot.controller.BusinessManageController {
++ CommonResult shopShow(Integer)
++ CommonResult shopAdd(BusinessShop)
++ CommonResult shopEdit(BusinessShop)
++ CommonResult shopDelete(Integer)
++ CommonResult changeState(Integer)
++ CommonResult changeNotesInfoAndState(NotesManage)
+}
+
+class com.edu.boot.controller.RecruitmentManageController {
++ CommonResult shopRecruitmentShow(Integer)
++ CommonResult addRecruitment(Recruitment)
++ CommonResult editRecruitment(Recruitment)
++ CommonResult delRecruitmentShow(Integer)
++ CommonResult RecruitmentPosterExist(Integer)
++ CommonResult RecruitmentPoster(Banner)
++ CommonResult getMyAllNotes(Integer)
+}
+
+class com.edu.boot.controller.RootStudentManageController {
++ CommonResult stuShow(Integer,Integer)
++ CommonResult stuEditById(Users)
++ CommonResult stuDeleteById(Users)
++ CommonResult identityPassById(Integer,Integer)
++ CommonResult stuSearchByName(Integer,Integer,String)
++ CommonResult sResumeManage()
+}
+
+class com.edu.boot.controller.StudentController {
++ CommonResult getRec()
++ CommonResult getRecInfoByid(Integer)
++ CommonResult searchRecInfo(String)
++ CommonResult AddRecHeat(Integer)
++ CommonResult getTop()
++ CommonResult getInfo(Integer)
++ CommonResult stuEditImg(Users)
++ CommonResult stuEditPassword(EditPasswordVo)
++ CommonResult upload(Integer,MultipartFile)
++ CommonResult getNotes(Integer)
++ CommonResult download(String,HttpServletResponse)
++ CommonResult delNotes(Integer,String)
++ CommonResult sendNotes(NotesManage)
++ CommonResult commentShowByRecId(Integer)
++ CommonResult addComment(Comment)
++ CommonResult addCommentReply(CommentReply)
++ CommonResult delComment(Integer)
++ CommonResult delCommentReply(Integer)
++ CommonResult getMyDeliver(Integer)
+}
+
+class com.edu.boot.controller.UsersController {
++ CommonResult login(Users)
++ CommonResult addUser(Users)
+}
+
+class com.edu.boot.controller.RootBusinessManageController {
++ CommonResult merchantsShow(Integer,Integer)
++ CommonResult shopShow(Integer,Integer)
++ CommonResult recruitmentShow()
++ CommonResult merchantsSearchByName(Integer,Integer,String)
++ CommonResult shopSearchByName(Integer,Integer,String)
++ CommonResult merchantsEditById(Users)
++ CommonResult identityPassById(Integer,Integer)
++ CommonResult merchantsDeleteById(Integer)
++ CommonResult shopEditById(BusinessShopAllInfoVo)
++ CommonResult shopDeleteById(Integer)
++ CommonResult delNotesByNid(Integer)
++ CommonResult getAllRecAndComment()
++ CommonResult identityPassShop(Integer,Integer)
+}
+
+@enduml
